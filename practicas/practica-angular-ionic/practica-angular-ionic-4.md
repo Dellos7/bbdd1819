@@ -1,3 +1,5 @@
+{%raw%}
+
 # Introducción a Ionic
 
 [Ionic](https://ionicframework.com/) se define a sí mismo como un framework o kit de herramientas para desarrollar aplicaciones de alta calidad multiplataforma (iOS, Android y web) utilizando un único código base.
@@ -227,3 +229,5 @@ Tienes toda la documentación acerca de como usar los alerts [aquí](https://ion
 ---
 
 En las siguientes secciones comenzaremos ya a desarrollar la pequeña aplicación web de campeones de League of Legends. Ve a la siguiente sección: [Pantalla principal: Lista de campeones](./practica-angular-ionic-5.md)
+
+{%endraw%}
