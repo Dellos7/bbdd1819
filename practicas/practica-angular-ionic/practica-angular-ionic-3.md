@@ -31,7 +31,7 @@ miNombre: string = 'Akali';
 Y añade esta línea en `home.html` (dentro de `ion-content`):
 
 ```html
-Hola! Soy {{ miNombre }}
+Hola! Soy &#123;&#123; miNombre &#125;&#125;
 ```
 
 Guarda ambos ficheros. ¿Qué está ocurriendo? ¡Se está sustituyendo `{{ miNombre }}` por la variable definida en el controlador! Angular está procesando lo que se encuentra entre claves y lo está sustituyendo por el contenido de la variable del controlador. Es lo que se conoce como **interpolación**. Dentro de las claves podemos escribir código TypeScript válido en el controlador.
