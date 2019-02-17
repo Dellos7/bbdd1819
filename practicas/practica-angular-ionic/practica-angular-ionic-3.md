@@ -1,3 +1,5 @@
+{%raw%}
+
 # Introducción a Angular
 
 En la [sección anterior](./practica-angular-ionic-2.md) vimos la estructura básica y los principales ficheros de una aplicación en Angular. Incluso hicimos un pequeño adelanto de la potencia de Ionic.
@@ -31,7 +33,7 @@ miNombre: string = 'Akali';
 Y añade esta línea en `home.html` (dentro de `ion-content`):
 
 ```html
-Hola! Soy &#123;&#123; miNombre &#125;&#125;
+Hola! Soy {{ miNombre }}
 ```
 
 Guarda ambos ficheros. ¿Qué está ocurriendo? ¡Se está sustituyendo `{{ miNombre }}` por la variable definida en el controlador! Angular está procesando lo que se encuentra entre claves y lo está sustituyendo por el contenido de la variable del controlador. Es lo que se conoce como **interpolación**. Dentro de las claves podemos escribir código TypeScript válido en el controlador.
@@ -283,3 +285,5 @@ No te olvides de añadir el atributo `nuevoCampeonFavorito: string;` al controla
 Ya has visto una primera introducción a Angular y conoces los elementos básicos que, pese a ser pocos y básicos, nos permitirán desarrollar la mayor parte de nuestras aplicaciones en Angular. 
 
 Ahora, ve a la siguiente sección: [Introducción a Ionic](./practica-angular-ionic-4.md)
+
+{%endraw%}
