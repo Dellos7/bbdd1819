@@ -1,6 +1,6 @@
 # StackBlitz
 
-[**StackBlitz**](https://stackblitz.com/) es una plataforma online que emula el famoso IDE de escritorio Visual Studio Code. Permite desarrollar aplicaciones web de muchos tipos de forma totalmente online y gratuita, sin tener que instalar por tanto nada en nuestro ordenador. Además, cuenta con una integración directa con Firebase Hosting, de tal forma que podemos desplegar nuestra aplicación web en la nube de forma muy sencilla y... ¡gratis!
+[**StackBlitz**](https://stackblitz.com/) es una plataforma que permite desarrollar aplicaciones web de muchos tipos, de forma totalmente online y gratuita, sin tener que instalar por tanto nada en nuestro ordenador. Es, en realidad, un IDE (*Entorno de Desarrollo Integrado*), que cuenta además con una integración directa con Firebase Hosting, una plataforma que nos permitirá desplegar nuestra aplicación web en la nube de forma muy sencilla y... ¡gratis!
 
 ## Crear una cuenta en StackBlitz
 
@@ -30,10 +30,10 @@ Si cometemos un **error** en el código, normalmente nos aparecerá en la propia
 
 Podemos editar proyectos ajenos (como el del enlace al que has accedido), pero no podremos guardarlos. Esto es útil para hacer pruebas, pero si no podemos guardar los cambios del proyecto, al recargar el proyecto habremos perdido los cambios. 
 
-Por ello, debemos **clonar el proyecto en nuestra cuenta de StackBlitz**. Si te fijas en la captura de pantalla anterior, es tan sencillo como hacer click sobre el botón **Fork** de la barra superior de navegación. Hazlo: **clona el proyecto en tu cuenta de StackBlitz**.
+Por ello, debemos **clonar el proyecto en nuestra cuenta de StackBlitz** (es decir, hacer una copia del proyecto en nuestra propia cuenta). Si te fijas en la captura de pantalla anterior, es tan sencillo como hacer click sobre el botón **Fork** de la barra superior de navegación. Hazlo: **clona el proyecto en tu cuenta de StackBlitz**. Cuando finalice el *fork*, te habrá redirigido al proyecto, pero esta vez será el tuyo propio, alojado en tu propia cuenta.
 
 > **Nota**: necesitarás estar logueado en StackBlitz para poder clonar el proyecto.
 
 ---
 
-Ves al siguiente paso: [Estructura de un proyecto Angular](practica-angular-ionic-2.md).
+👉🏻 Ves al siguiente paso: [Estructura de un proyecto Angular](practica-angular-ionic-2-nuevo.md).
