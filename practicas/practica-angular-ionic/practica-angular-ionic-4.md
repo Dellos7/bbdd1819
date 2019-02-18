@@ -71,7 +71,7 @@ campeon-detalle {
 
 Fíjate en el código y asegúrate de que entiendes lo que está haciendo.
 
-Ahora tenemos que **definir nuestra nueva página** en el fichero `app/app.module.ts`. Asegúrate de que queda así:
+Ahora tenemos que **definir nuestra nueva página** en el fichero de configuración `app/app.module.ts`. Asegúrate de que queda así:
 
 ![](./app.module.ts_2.jpg)
 
@@ -158,7 +158,7 @@ hacerPaginaCameponDetalleRaiz() {
 }
 ```
 
-Tan sencillo como eso. Si lo pruebas, verás que ya no aparece la flechita para volver atrás en la página `campeon-detalle`. Y encima, si haces click en el botón `Volver atrás`, no funcionará (de hecho, si abres la consola de StackBlitz verás que da un error indicando que la pila de navegación debe tener al menos una página raíz ).
+Tan sencillo como eso. Si lo pruebas, verás que ya no aparece la flechita para volver atrás en la página `campeon-detalle`. Y encima, si haces click en el botón `Volver atrás`, no funcionará (de hecho, si abres la consola de StackBlitz verás que da un error indicando que la pila de navegación debe tener al menos una página raíz).
 
 ![](./campeon-detalle_3.jpg)
 
@@ -214,13 +214,15 @@ y añade un botón en el html que llame a esta función.
 
 ![](./campeon-detalle_5.jpg)
 
-Es sólo cuestión de modificar los parámetros que le pasamos al alert, haciendo un poco de caso a la [documentación oficial](https://ionicframework.com/docs/v3/components/#alerts).
+Es sólo cuestión de modificar los parámetros que le pasamos al alert, haciendo un poco de caso a la [documentación oficial](https://ionicframework.com/docs/v3/components/#alerts) sobre los alerts en Ionic.
 
-El parámetro `inputs` recibe un array con los inputs que mostraremos en el alert. Es importante el parámetro `name`, ya que después lo utilizaremos para recoger el valor del input, en el `handler` del botón `Cambiar`. 
+¿Qué significan todos los parámetros?
+
+El parámetro `inputs` recibe un array con los inputs que mostraremos en el alert. Es importante el atributo `name`, ya que después lo utilizaremos para recoger el valor del input, en el `handler` del botón `Cambiar`. 
 
 Fíjate en los botones. Estamos definiendo ambos como un JSON, con parámetro `text` y `handler`. El parámetro `text` simplemente indica el texto que aparecerá en el botón, y el parámetro `handler` recibe una función, que a su vez recibe un parámetro (`data`). Esta función se ejecutará cuando hagamos click en el botón `Cambiar`. 
 
-Lo que hacemos a continuación (`this.nombreCampeon = data.nombre;`) es modificar el atributo `nombreCampeon` de la clase `CampeonDetallePage`, y le asignamos `data.nombre`. En `data` estamos recibiendo todos los datos que hayamos introducido en los `input` del alert, y `nombre` es porque así se lo indicamos en el `name` del `input` que definimos en el parámetro `inputs`. Es decir, estamos recogiendo la información del input con `name` = `nombre` en la función que se ejecuta al hacer click sobre `Cambiar`.
+Lo que hacemos a continuación (`this.nombreCampeon = data.nombre;`) es modificar el atributo `nombreCampeon` de la clase `CampeonDetallePage`, y le asignamos `data.nombre`. En `data` estamos recibiendo todos los datos que hayamos introducido en los `input` del alert, y `nombre` es porque así se lo indicamos en el `name` del `input` que definimos en el parámetro `inputs`. Es decir, estamos recogiendo la información del input con `name` = `nombre` en la función que se ejecuta al hacer click sobre `Cambiar`. Lo verás mejor con las flechitas de la imagen:
 
 ![](./campeon-detalle.ts_3.jpg)
 

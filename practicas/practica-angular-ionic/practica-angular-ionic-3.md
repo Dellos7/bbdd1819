@@ -22,9 +22,12 @@ Ahora podremos unir variables entre el `.html` y el `.ts`, lo que se conoce como
 
 El *one-way binding* o **binding de una única dirección** es el que permite que:
 * La vista (el `.html`) pueda mostrar variables definidas en el controlador (`.ts`) y que se actualice siempre que se actualicen estas variables.
-* El controlador (`.ts`) pueda enterarse de eventos que ocurren en la vista (`.html`). Por ejemplo, cuando se haga click en un botón que se ejecute una función definida en el controlador.
 
-Por ejemplo, añade el siguiente atributo en la clase `HomePage`:
+o al revés:
+
+* El controlador (`.ts`) pueda enterarse de eventos que ocurren en la vista (`.html`). Un ejemplo sería que cuando se haga click en un botón, se ejecute una función definida en el controlador.
+
+Vamos a verlo con ejemplos. Añade el siguiente atributo en la clase `HomePage`:
 
 ```typescript
 miNombre: string = 'Akali';
@@ -36,9 +39,11 @@ Y añade esta línea en `home.html` (dentro de `ion-content`):
 Hola! Soy {{ miNombre }}
 ```
 
-Guarda ambos ficheros. ¿Qué está ocurriendo? ¡Se está sustituyendo `{{ miNombre }}` por la variable definida en el controlador! Angular está procesando lo que se encuentra entre claves y lo está sustituyendo por el contenido de la variable del controlador. Es lo que se conoce como **interpolación**. Dentro de las claves podemos escribir código TypeScript válido en el controlador.
+Guarda ambos ficheros. ¿Qué está ocurriendo? ¡Se está sustituyendo `{{ miNombre }}` por la variable definida en el controlador! Angular está procesando lo que se encuentra entre llaves y lo está sustituyendo por el contenido de la variable del controlador. Es lo que se conoce como **interpolación**. Dentro de las llaves podemos escribir código TypeScript válido en el controlador.
 
-Elimina ahora en el html la línea del botón que no utiliza Ionic y todo el texto de arriba, para que no moleste. Modifica ahora el botón que utiliza Ionic, de modo que quede así:
+El tipo de *one-way binding* que acabamos de ver es el que permite que **cuando se modifica una variable en el controlador, se actualice la vista** en consecuencia.
+
+Vamos a ver ahora **el contrario**: **que la vista pueda actualizar variables y ejecutar código en el controlador**. Elimina ahora en el html la línea del botón que no utiliza Ionic y todo el texto de arriba, para que no moleste. Modifica el botón que utiliza Ionic, de modo que quede así:
 
 ```html
  <button ion-button block color="secondary" (click)="miNombre = 'Draven'">Cambiar nombre</button>
@@ -46,9 +51,7 @@ Elimina ahora en el html la línea del botón que no utiliza Ionic y todo el tex
 
 ![](./home.html_view-2.jpg)
 
-Si lo pruebas y haces click sobre el botón, verás que el texto `Hola! Soy Akali` se sustituye por `Hola! Soy Draven`. ¿Qué es lo que está ocurriendo en realidad? Estamos indicando que cuando ocurra el evento `click` sobre el botón (fíjate que se pone entre paréntesis `(` y `)` el nombre del evento), ejecutaremos lo siguiente: `miNombre = 'Draven'`. 
-
-Aquí podemos indicar código TypeScript válido en el controlador. Estamos modificando la variable `miNombre` definida en el controlador por el string `'Draven'`. Modifica ahora el botón de la siguiente forma:
+Si lo pruebas y haces click sobre el botón, verás que el texto `Hola! Soy Akali` se sustituye por `Hola! Soy Draven`. ¿Qué es lo que está ocurriendo en realidad? Estamos indicando que cuando ocurra el evento `click` sobre el botón (fíjate que se pone entre paréntesis `(` y `)` el nombre del evento), ejecutaremos lo siguiente: `miNombre = 'Draven'`, osea, código TypeScript sencillo que podríamos utilizar en el controlador. En este caso, estamos modificando la variable `miNombre` definida en el controlador por el string `'Draven'`. Modifica ahora el botón de la siguiente forma:
 
 ```html
  <button ion-button block color="secondary" (click)="cambiarNombre('Draven')">Cambiar nombre</button>
@@ -75,7 +78,7 @@ Vamos a verlo. Añade lo siguiente en el html:
   Indica tu nombre: <input type="text" [(ngModel)]="miNombre"/>
 ```
 
-La propiedad `[(ngModel)]` permite hacer un binding de doble dirección del elemento `input` con la variable `miNombre`. 
+La propiedad `[(ngModel)]` permite hacer un binding de doble dirección del elemento `input` con la variable `miNombre`. Los corchetes (`[` y `]`) indican que el elemento `input` obtendrá su valor de la variable `miNombre` definida en el controlador. Y los paréntesis (`(` y `)`) justamente lo contrario: que la variable del `miNombre` del controlador se actualizará en base a lo que el usuario introduzca en el `input`.
 
 Pruébalo tú mismo. Verás que cuando guardes, directamente aparecerá en el input `Akali`. Esto es porque está funcionando: ¡se está mostrando en el input el valor de la variable `miNombre`!
 
@@ -192,7 +195,7 @@ Y modifica el anterior `h2` para que quede así:
   <h2 *ngIf="listaCampeones.length > 0" [ngClass]="{ 'color-verde': listaCampeones.length >= 3, 'color-naranja': listaCampeones.length < 3 }">Lista campeones:</h2>
 ```
 
-Lo primero en lo que te debes fijar es que el `ngClass` está encuadrada en claves `[` y `]`. Esto significa que es una directiva de *one-way binding* y que es el controlador el que actualiza la vista cuando alguna de las variables que afectan a la directiva se ve modificada. 
+Lo primero en lo que te debes fijar es que el `ngClass` está encuadrada en corchetes `[` y `]`. Esto significa que es una directiva de *one-way binding* y que es el controlador el que actualiza la vista cuando alguna de las variables que afectan a la directiva se ve modificada.
 
 Además, fíjate en la sintaxis de utilización del `ngClass`. Se está indicando un JSON, en el cual las claves son las clases CSS a añadir al componente y los valores son las condiciones booleanas para añadir o no dichas clases. En el ejemplo, la clase `color-verde` se añadirá al `h2` siempre que la lista de campeones tenga igual o más de 3 elementos. Por contra, la clase `color-naranja` se añadirá al `h2` siempre que la lista de campeones tenga menos de 3 elementos. Prueba a añadir o quitar campeones al array y fíjate en como van cambiando los colores.
 
@@ -219,13 +222,15 @@ export class CampeonesService {
 
 Si te fijas, es una clase normal y corriente, pero con la anotación `@Injectable()`. Esto es lo que hace Angular pueda saber que esta clase actúa como un servicio.
 
-Pero no sólo esto es lo que hace que podamos utilizar el servicio como es debido. Entra en el fichero `app/app.module.ts`. Asegúrate de que queda de la siguiente forma:
+Pero no sólo esto es lo que hace que podamos utilizar el servicio como es debido. Entra en el fichero de configuración `app/app.module.ts`. Asegúrate de que queda de la siguiente forma:
+
+> **Nota**: StackBlitz añade por defecto el servicio generador en este fichero. A mí me ha pasado que StackBlitz me ha añadido el servicio, pero no lo ha hecho correctamente, y me estaba dando un error. Es por ello que debes asegurarte de que te queda igual que en la captura (al final, que quede bien añadido en el array `providers`).
 
 ![](./campeones-service_app.module.jpg)
 
 Si te fijas, lo que estamos haciendo en realidad es indicar en la configuración del módulo principal de la aplicación que la clase `CampeonesService` se utilizará como `provider` (osea, un servicio) en las distintas páginas y componentes de la aplicación.
 
-Vamos a verlo en acción. Utilizaremos el servicio que acabamos de crear para guardar una lista que podremos utilizar en las distintas páginas de la aplicación. Haz que tu clase `CampeonesService` quede parecida a esta. Se guarda una lista de campeones favoritos en el servicio y se ofrecen métodos para añadir un nuevo campeón favorito y para obtener el último campeón favorito añadido:
+Vamos a verlo en acción. Utilizaremos el servicio que acabamos de crear para guardar una lista que podremos utilizar en las distintas páginas de la aplicación. Haz que tu clase `CampeonesService` quede parecida a esta. Se guarda una lista de campeones favoritos en el servicio y se ofrecen métodos para añadir un nuevo campeón favorito y para obtener el último campeón favorito añadido a la lista:
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -258,7 +263,7 @@ Para utilizar el servicio en el controlador home, es tan sencillo como añadirlo
 
 ![](./home.html_view-6.jpg)
 
-Ahora, podemos utilizar el servicio en la página `HomePage` sin necesidad de instanciar la clase `CampeonesService`, ya que al ser un servicio es Angular el que la instancia por nosotros. Esto quiere decir que, si utilizáramos el servicio en distintas páginas, por ejemplo, podríamos acceder a la misma lista, y la tendríamos actualizada y accesible en las distintas páginas.
+Ahora, podemos utilizar el servicio en la página `HomePage` sin necesidad de instanciar la clase `CampeonesService`, ya que al ser un servicio es Angular el que la instancia por nosotros (osea, podemos utilizar `campeonesSvc` sin necesidad de hacer un `new CampeonesService()`) e inyecta en cada página la instancia única del servicio que tiene guardada. Esto quiere decir que, si utilizáramos el servicio en distintas páginas, por ejemplo, podríamos acceder a la misma lista, y la tendríamos actualizada y accesible en las distintas páginas.
 
 Añadamos algo de código al html para interactuar con el servicio y ver que funciona:
 
@@ -276,7 +281,7 @@ Nombre del nuevo campeón favorito: <input type="text" [(ngModel)]="nuevoCampeon
 </ul>
 ```
 
-No te olvides de añadir el atributo `nuevoCampeonFavorito: string;` al controlador para poder recoger el valor del `input`. Si lo pruebas, deberías tener un resultado parecido a este:
+**Lee el código y trata de entender lo que hace**. Estamos utilizando continuamente el servicio `campeonesSvc` que tenemos en el controlador. No te olvides de añadir el atributo `nuevoCampeonFavorito: string;` al controlador para poder recoger el valor del `input`. Si lo pruebas, y añades varios campeones favoritos, deberías tener un resultado parecido a este:
 
 ![](./home.html_view-7.jpg)
 
