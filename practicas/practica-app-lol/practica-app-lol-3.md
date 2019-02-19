@@ -7,7 +7,3 @@ En este tercer vídeo veremos como añadir nuevos campeones a la lista y elimina
 ![](./eliminar_campeon.jpg)
 
 VÍDEO
-
----
-
-👉🏻 [Siguiente vídeo](./practica-app-lol-4.md)
