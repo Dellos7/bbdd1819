@@ -135,9 +135,9 @@ Para crear el campo `id` en un documento de Firebase utilizando el método `add`
 
 ```typescript
 crearDocumentoConIdAutomaticoYCampoId( documento ) {
-    this.notasCollection.add(documento).then( (docGuardadoFirebase) => {
+    this.coleccionFirebase.add(documento).then( (docGuardadoFirebase) => {
         let docId = docGuardadoFirebase.id;
-        this.notasCollection.doc(`${docId}`).update({
+        this.coleccionFirebase.doc(`${docId}`).update({
             'id': docId
         });
     });
