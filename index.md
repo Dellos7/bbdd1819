@@ -6,6 +6,8 @@
 
 [Práctica 3: Integración de la aplicación web League of Legends con base de datos de Firebase](./practicas/practica-app-lol-firebase/index.md)
 
+[Práctica 4: Trabajo individual. Aplicación de notas](./practicas/practica-app-notas/index.md)
+
 [Callbacks](./callbacks.md)
 
 [Observables](./observables.md)
