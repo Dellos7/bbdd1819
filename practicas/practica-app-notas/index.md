@@ -91,3 +91,57 @@ export class FechaFirebaseService {
 
 }
 ```
+
+¿Cómo podrías utilizar estos métodos del servicio?
+
+```typescript
+//Imagina que el objeto "nota" es un documento recibido de Firebase y que tiene el campo "fecha"
+
+let fechaNotaISO = this.fechaSvc.convertirFechaFirebaseAFechaJavaScriptISO( nota.fecha );
+
+//En este momento, podrás utilizar "fechaNotaISO" para mostrar la fecha en la aplicación, utilizando por ejemplo el componente de Ionic que ya existe para ello
+```
+
+```typescript
+//Imagina que el método "notasSvc.guardarNota(nota)" guarda el objeto "nota" en Firebase. El objeto nota tendría el campo "fecha" en formato ISO (tendría un binding con el componente de fecha de Ionic)
+
+nota.fecha = this.fechaSvc.convertirFechaJsISOAFechaFirebase( nota.fecha );
+this.notasSvc.guardarNota(nota);
+```
+
+```typescript
+//Imagina que el objeto "nota" es un documento recibido de Firebase y que tiene el campo "fecha"
+
+let fechaDiaMes_MostrarEnVista = this.fechaSvc.formatearFechaFirebase_DDM( nota.fecha );
+```
+
+## Guardar IDs generados automáticamente en Firebase
+
+En los anteriores ejemplos hemos asignado de forma manual los IDs de los documentos que creábamos en Firebase (por ejemplo, el documento para el campeón `Ahri` tenía como identificador del documento `ahri`).
+
+Sin embargo, quizá en una aplicación de notas no tenga sentido crear un ID manual para cada documento de nota.
+
+Para crear un documento con un ID automático, recuerda que utilizábamos el método `add`. Ejemplo:
+
+```typescript
+crearDocumentoFirebaseConIdAutomatico( documento ) {
+    this.coleccionFirebase.add( documento );
+}
+```
+
+El **problema** que tenemos con esto es que cuando recibimos los datos de la colección, estos identificadores automáticos no nos aparecen por ningún sitio. Es decir, que si no existe el campo `id` creado de forma manual en el cuerpo del documento, no sabremos que ID tiene cada documento. Este ID lo necesitarás para poder editar o eliminar las notas, entre otras cosas.
+
+Para crear el campo `id` en un documento de Firebase utilizando el método `add`, que crea un documento con un identificador automático, lo deberíamos hacer de la siguiente forma:
+
+```typescript
+crearDocumentoConIdAutomaticoYCampoId( documento ) {
+    this.notasCollection.add(documento).then( (docGuardadoFirebase) => {
+        let docId = docGuardadoFirebase.id;
+        this.notasCollection.doc(`${docId}`).update({
+            'id': docId
+        });
+    });
+}
+```
+
+Lo que hacemos aquí es utilizar la función `then` del resultado de ejecutar el método `add`. A este método le podemos pasar una función (será un `callback`) y esa función recibirá el documento guardado en Firebase (en el ejemplo, `docGuardadoFirebase`). Este objeto recibido tiene el campo `id`, que podemos utilizar en ese momento junto con el método `update`, que sirve para actualizar el documento. Actualizamos por tanto el documento y le añadimos el campo `id` en el cuerpo del documento para poder utilizarlo después cuando lo necesitemos.
