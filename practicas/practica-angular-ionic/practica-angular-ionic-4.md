@@ -112,11 +112,11 @@ El método `push` acepta como segundo parámetro un JSON al que podemos añadir 
 Vamos a utilizar esta función en el html. Añade en `home.html` el siguiente botón:
 
 ```html
-<button ion-button color="dark" clear (click)="irAPaginaCampeonDetalleConParametroNombre(miNombre)"
+<button ion-button color="dark" clear (click)="irAPaginaCampeonDetalleConParametroNombre(campeon.nombre)"
 >Ir a página campeon-detalle con parámetro nombre</button>
 ```
 
-Lo único que estamos haciendo es llamar a la nueva función, y le pasamos por parámetro el atributo `miNombre` del controlador.
+Lo único que estamos haciendo es llamar a la nueva función, y le pasamos por parámetro el campo `nombre` del atributo `campeon` del controlador, que recordemos es un objeto.
 
 Pero todavía nos falta algo: recoger el parámetro `mi_nombre` que estamos enviando en el método `push` a la página `CampeonDetallePage`. Ve a `CampeonDetallePage` y asegúrate de que te queda así:
 
@@ -227,9 +227,5 @@ Lo que hacemos a continuación (`this.nombreCampeon = data.nombre;`) es modifica
 ![](./campeon-detalle.ts_3.jpg)
 
 Tienes toda la documentación acerca de como usar los alerts [aquí](https://ionicframework.com/docs/v3/components/#alerts).
-
----
-
-En las siguientes secciones comenzaremos ya a desarrollar la pequeña aplicación web de campeones de League of Legends. Ve a la siguiente sección: [Pantalla principal: Lista de campeones](./practica-angular-ionic-5.md)
 
 {%endraw%}

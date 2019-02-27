@@ -8,9 +8,9 @@ En esta sección vamos a tratar de hacer un **repaso por las principales funcion
 
 ## *Binding*
 
-El *binding*, traducido al castellano como *unión* o *atadura* es un mecanismo que nos permite unir o asociar variables entre el fichero `.html` y el fichero `.ts`.
+El *binding*, traducido al castellano como *unión* o *atadura* es un mecanismo que nos permite unir o asociar variables entre el fichero `.html` y el fichero `.ts`. Esto es útil para mostrar datos en la vista (`.html`) procedentes de un servicio de datos (por ejemplo, una base de datos) o para recoger datos en el `.ts` que se hayan introducido en la vista (por ejemplo, un formulario con `inputs`) y que podríamos almacenar también en una base de datos si quisiéramos.
 
-Por ejemplo, la página home (`pages/home`) dispone de los ficheros `home.ts` y `home.html`. En Angular, a este fichero `.ts` se le llama **controlador**, porque es el fichero encargado de controlar lo que ocurre en el fichero `.html`. 
+La página home (`pages/home`) dispone de los ficheros `home.ts` y `home.html`. En Angular, a este fichero `.ts` se le llama **controlador**, porque es el fichero encargado de controlar lo que ocurre en el fichero `.html` (la vista).
 
 Pero, ¿cómo asociamos un controlador a su `.html`? Bueno, ya lo vimos en la sección anterior: necesitamos indicar que la clase `HomePage` es un componente Angular y, dentro de la anotación `@Component` le indicamos que su fichero `.html` es `home.html` en la variable `templateUrl`. De esta forma, el fichero `home.ts` se ha convertido automáticamente en el controlador de `home.html`.
 
@@ -75,7 +75,7 @@ Vamos a verlo. Añade lo siguiente en el html:
 
 ```html
 <br>
-  Indica tu nombre: <input type="text" [(ngModel)]="miNombre"/>
+Indica tu nombre: <input type="text" [(ngModel)]="miNombre"/>
 ```
 
 La propiedad `[(ngModel)]` permite hacer un binding de doble dirección del elemento `input` con la variable `miNombre`. Los corchetes (`[` y `]`) indican que el elemento `input` obtendrá su valor de la variable `miNombre` definida en el controlador. Y los paréntesis (`(` y `)`) justamente lo contrario: que la variable del `miNombre` del controlador se actualizará en base a lo que el usuario introduzca en el `input`.
@@ -85,6 +85,38 @@ Pruébalo tú mismo. Verás que cuando guardes, directamente aparecerá en el in
 ![](./home.html_view-3.jpg)
 
 Pero no acaba ahí: escribe ahora otra cosa en el input. ¡Sí! **Se modifica en tiempo real** el texto `Hola! Soy Akali` por `Hola! Soy ...` (lo que sea que hayas escrito). Prueba ahora el botón. Se está cambiando tanto el texto como el contenido del input.
+
+Ahora añade el siguiente objeto JSON como atributo de la clase del controlador: 
+
+```typescript
+campeon: any = {
+  nombre: 'Akali',
+  descripcion: 'Akali es un campeón...'
+};
+```
+
+También lo podrías hacer así (es decir, inicializando el objeto en el constructor):
+
+```typescript
+campeon: any;
+
+constructor( public navCtrl: NavController ) {
+   this.campeon = {
+    nombre: 'Akali',
+    descripcion: 'Akali es un campeón...'
+  };
+}
+```
+
+Y, ahora, hay que hacer el *binging* en la vista con la propiedad `nombre` del objeto `campeon`:
+
+```html
+Hola! Soy {{ campeon.nombre }}
+<br>
+Indica tu nombre: <input type="text" [(ngModel)]="campeon.nombre"/>
+  ```
+
+¿Lo ves? También funcionaría sin problemas. Este es sólo un ejemplo para que veas que se pueden utilizar también los campos de los objetos desde la propia vista, no únicamente los atributos por separado que creamos en el controlador.
 
 ¿Qué te parece? Esto es sólo un poco de la potencia de Angular. Si quieres saber más acerca del *binding* existen múltiples recursos disponibles en internet, como por ejemplo la [documentación oficial](https://angular.io/guide/template-syntax).
 
@@ -112,7 +144,7 @@ Añade lo siguiente en el html:
         Descripción:
     </h2>
     <p>
-        Akali es un campeón ...
+        {{ campeon.descripcion }}
     </p>
 </div>
 ```
