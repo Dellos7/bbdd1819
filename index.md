@@ -8,6 +8,8 @@
 
 [Práctica 4: Trabajo individual. Aplicación de notas](./practicas/practica-app-notas/index.md)
 
+# Actividades
+
 [Callbacks](./callbacks.md)
 
 [Observables](./observables.md)
