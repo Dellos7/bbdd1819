@@ -4,7 +4,7 @@
 
 ## Crear una cuenta en StackBlitz
 
-Accede al siguiente enlace: [https://stackblitz.com/edit/ionic3-plantilla-starter](https://stackblitz.com/edit/ionic3-plantilla-starter). StackBlitz no tiene una base de datos propia de usuarios, si no que permite hacer login utilizando GitHub. Fíjate en la barra superior de navegación, y haz click en *Sign in*. En la siguiente pantalla, crea una cuenta con GitHub, si es que no tienes una ya. 
+Accede al siguiente enlace: [https://stackblitz.com/edit/ionic3-plantilla-starter-bbdd1819](https://stackblitz.com/edit/ionic3-plantilla-starter-bbdd1819). StackBlitz no tiene una base de datos propia de usuarios, si no que permite hacer login utilizando GitHub. Fíjate en la barra superior de navegación, y haz click en *Sign in*. En la siguiente pantalla, crea una cuenta con GitHub, si es que no tienes una ya. 
 
 ![](./sign-in-github.jpg)
 

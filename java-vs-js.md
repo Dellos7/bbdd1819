@@ -231,3 +231,35 @@ sumaConCallback( 2, 3, funcionCallback);
 
 // 5
 ```
+
+```typescript
+let suma = function(num1, num2) {
+    console.log(`-> El num1 recibido por parámetro es ${num1}`);
+    console.log(`-> El num2 recibido por parámetro es ${num2}`);
+    return num1 + num2;
+};
+
+let resultadoSuma = suma( 2, 3 );
+console.log(`La suma de 2 y 3 es ${resultadoSuma}`);
+```
+
+
+```typescript
+let listaAnimales = [ 'perro', 'gato', 'pajaro', 'hamster', 'conejo', 'cobaya' ];
+let tamLista = listaAnimales.length;// Obtiene el tamaño de la lista
+console.log(tamLista);// 6
+
+let nuevoAnimal = 'tortuga';
+listaAnimales.push(nuevoAnimal);// Añade un elemento a la lista
+
+let animalPrimeraPosicion = listaAnimales[0];
+console.log(animalPrimeraPosicion);// perro
+
+listaAnimales.splice(2, 1);// Elimina 1 elemento a partir del indice 2 (en este caso, 'pajaro')
+
+console.log(listaAnimales);// ["perro", "gato", "hamster", "conejo", "cobaya", "tortuga"]
+
+listaAnimales[1] = 'tigre';// Modifica 'gato' por 'tigre'
+
+console.log(listaAnimales);// ["perro", "tigre", "hamster", "conejo", "cobaya", "tortuga"]
+```
