@@ -36,4 +36,4 @@ Por ello, debemos **clonar el proyecto en nuestra cuenta de StackBlitz** (es dec
 
 ---
 
-👉🏻 Ves al siguiente paso: [Estructura de un proyecto Angular](practica-angular-ionic-2-nuevo.md).
+👉🏻 Ve al siguiente paso: [Estructura de un proyecto Angular](practica-angular-ionic-2-nuevo.md).

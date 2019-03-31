@@ -81,4 +81,4 @@ Y añade estas dos líneas justo después de `</ul>`:
 
 ---
 
-Vamos a profundizar un poco más en Angular. Ve a la siguiente sección: [Introducción a Angular](./practica-angular-ionic-3.md)
+Vamos a profundizar un poco más en Angular. 👉🏻 Ve a la siguiente sección: [Introducción a Angular](./practica-angular-ionic-3.md)

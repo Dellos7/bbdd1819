@@ -2,6 +2,11 @@
 
 [Práctica 1: Introducción al desarrollo de aplicaciones web con Angular e Ionic](./practicas/practica-angular-ionic/index.md)
 
+1. [Comenzando con StackBlitz](./practicas/practica-angular-ionic-1.md)
+2. [Estructura de un proyecto Angular](./practicas/practica-angular-ionic-2-nuevo.md)
+3. [Introducción a Angular](./practicas/practica-angular-ionic-3.md)
+4. [Introducción a Ionic](./practicas/practica-angular-ionic-4.md)
+
 [Práctica 2: Aplicación web de League of Legends con Angular e Ionic](./practicas/practica-app-lol/index.md)
 
 [Práctica 3: Integración de la aplicación web League of Legends con base de datos de Firebase](./practicas/practica-app-lol-firebase/index.md)
