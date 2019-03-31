@@ -19,3 +19,7 @@ Tendrás que entregar:
     - ¿Qué no te ha quedado claro o crees no esta bien explicado?
 
 👉🏻 [¡Comencemos!](./practica-angular-ionic-1.md)
+
+> **NOTA**: Para descargar el proyecto de Stackblitz:
+
+![](./descargar-proyecto-stackblitz.jpg)
