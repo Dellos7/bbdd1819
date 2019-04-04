@@ -228,4 +228,8 @@ Lo que hacemos a continuación (`this.nombreCampeon = data.nombre;`) es modifica
 
 Tienes toda la documentación acerca de como usar los alerts [aquí](https://ionicframework.com/docs/v3/components/#alerts).
 
+- - - 
+
+Ya has finalizado la práctica, puedes proceder a la [entrega](./index.md#entrega) 🚀de la misma 💃🏻.
+
 {%endraw%}

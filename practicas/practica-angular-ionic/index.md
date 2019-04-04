@@ -18,6 +18,8 @@ Tendrás que entregar:
     - ¿Qué te ha parecido más interesante?
     - ¿Qué no te ha quedado claro o crees no esta bien explicado?
 
+Todo ello en el [aula virtual](https://aules.edu.gva.es/moodle/mod/assign/view.php?id=24852).
+
 👉🏻 [¡Comencemos!](./practica-angular-ionic-1.md)
 
 > **NOTA**: Para descargar el proyecto de Stackblitz:
