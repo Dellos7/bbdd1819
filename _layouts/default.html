@@ -26,7 +26,7 @@
 
     <header class="page-header" role="banner">
         {% if site.volver_pagina_principal %}
-        <a href="{{ site.github.repository_name }}" class="btn">Volver a página principal</a>
+        <a href="/{{ site.github.repository_name }}" class="btn">Volver a página principal</a>
         {% endif %}
         <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
         <h2 class="project-tagline">
