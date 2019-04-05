@@ -1,7 +1,6 @@
 theme: jekyll-theme-cayman
 title: Tema 8.- Bases de datos no relacionales
 description: Prácticas del tema 8 de la asignatura de Bases de Datos del CFGS de DAM, IES Caminàs, 2018-2019
-site:
-  github:
-    is_project_page: false
-  volver_pagina_principal: true
+github:
+  is_project_page: false
+volver_pagina_principal: true
