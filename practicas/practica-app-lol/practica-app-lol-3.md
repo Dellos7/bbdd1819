@@ -9,3 +9,7 @@ VÍDEO
 ![](./anyadir_campeon.jpg)
 
 ![](./eliminar_campeon.jpg)
+
+- - - 
+
+Ya has finalizado la práctica, puedes proceder a la [entrega](./index.md#entrega) 🚀de la misma 💃🏻.
