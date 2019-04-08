@@ -2,7 +2,7 @@
 
 Con este primer vídeo desarrollaremos la primera página de nuestra aplicación.
 
-VÍDEO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/06zN9dk1BJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Recursos
 
