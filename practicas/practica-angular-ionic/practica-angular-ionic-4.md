@@ -172,7 +172,7 @@ Veremos algún ejemplo. Añade el componente `AlertController` a la página `Cam
 
 ![](./campeon-detalle.ts_2.jpg)
 
-Añade un botón que llame a esta función. Al hacer click sobre él, deberías ver lo siguiente:
+Añade un botón que llame a esta función (hazlo tú esta vez, no te doy yo el código). Al hacer click sobre él, deberías ver lo siguiente:
 
 ![](campeon-detalle_4.jpg)
 

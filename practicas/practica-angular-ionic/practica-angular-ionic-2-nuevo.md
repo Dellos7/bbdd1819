@@ -2,15 +2,15 @@
 
 ## ¿Qué es Angular?
 
-[Angular](https://angular.io/) es un framework de desarrollo de aplicaciones web que utiliza el lenguaje de pgoramación JavaScript. 
+[Angular](https://angular.io/) es un framework de desarrollo de aplicaciones web que utiliza el lenguaje de programación JavaScript. 
 
-Permite desarrollar una aplicación dividiéndola en **páginas**. Las páginas son pues, eso, una página normal de una web. La diferencia es que cada una de estas páginas está controlada por un código TypeScript llamado controlador, que es, en resumen, una clase en lenguaje TypeScript.
+Permite desarrollar una aplicación dividiéndola en **páginas**. Las páginas son pues, eso, una página normal de una web. La diferencia es que cada una de estas páginas está controlada por un código TypeScript llamado **controlador**, que es, en resumen, una clase en lenguaje TypeScript.
 
 Por ahora no es necesario que entremos más en detalle sobre qué es Angular, ya lo irás descubriendo por el camino 😏
 
 ## Ficheros y directorios
 
-Verás que en el proyecto tiene creados por defecto muchos ficheros. No tienes que entender ni saber para qué sirve cada uno de estos ficheros, por ahora sólo vamos a ver los más básicos.
+Verás que el proyecto tiene creados por defecto muchos ficheros. No tienes que entender ni saber para qué sirve cada uno de estos ficheros, por ahora sólo vamos a ver los más básicos.
 
 ### Fichero `index.html`
 
@@ -53,10 +53,10 @@ Fíjate en el contenido del fichero `pages/home/home.ts`.
 ![](./home.ts.jpg)
 
 Este fichero es, simplemente, una clase: la clase `HomePage`. Sin embargo, con la anotación `@Component` que ofrece Angular, le estamos indicando lo siguiente:
-* **`selector`**. Estamos diciendo que su selector en el código HTML será `page-home`. Esto permite que si queremos después utilizar esta página en otro fichero HTML, tendremos que indicarlo simplemente así: `<page-home></page-home>`. Igual que hicimos en el `index.html` con `<ion-app></ion-app>`, ¿recuerdas?
+* **`selector`**. Estamos diciendo que su selector en el código HTML será `page-home`. Esto permite que si queremos después utilizar esta página en otro fichero HTML, tendremos que indicarlo simplemente así: `<page-home></page-home>`. Esto quiere decir que podemos inyectar la página utilizando este selector al igual que si incluyéramos, por ejemplo, un botón (`<button></button>`).
 * **`templateUrl`**. El fichero HTML en el que escribiremos el código HTML de esta página. Si te fijas, es `home.html`, que es el que tenemos creado en el directorio `pages/home`.
 
-Ves ahora al fichero `pages/home/home.html`. ¿Qué ves? ¡Sí! Código HTML puro y duro. 
+Ves ahora al fichero `pages/home/home.html`. ¿Qué ves? Exacto, es código HTML puro y duro. 
 
 ![](./home.html.jpg)
 

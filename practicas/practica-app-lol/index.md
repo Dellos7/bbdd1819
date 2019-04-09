@@ -11,11 +11,10 @@ En esta práctica aprenderás la primera parte: desarrollar la aplicación **sin
 Tendrás que entregar:
 * Enlace a la **aplicación web desplegada en Firebase**.
 * Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
+* **Código fuente** en un .zip de la aplicación de StackBlitz.
 * **Un documento** con las siguientes reflexiones:
     - ¿Qué has aprendido en esta práctica?
     - ¿Qué te ha parecido más interesante?
     - ¿Qué no te ha quedado claro o crees no esta bien explicado?
-
-![](./permisos-firebase.png)
 
 👉🏻 [¡Comencemos!](./practica-app-lol-1.md)

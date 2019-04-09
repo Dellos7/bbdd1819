@@ -2,7 +2,7 @@
 
 ## ¿Qué es Angular?
 
-[Angular](https://angular.io/) es un framework de desarrollo de aplicaciones web que utiliza el lenguaje de pgoramación JavaScript. Por si no lo sabes, el término *framework* se traduce al castellano por *marco de trabajo*, y en programación se refiere a un conjunto de herramientas que se utilizan para el desarrollo e implementación de una aplicación, y a las que se les da un nombre global para poder identificar de qué estamos hablando. Las **ventajas que nos proporcionan los frameworks** son muchas:
+[Angular](https://angular.io/) es un framework de desarrollo de aplicaciones web que utiliza el lenguaje de programación JavaScript. Por si no lo sabes, el término *framework* se traduce al castellano por *marco de trabajo*, y en programación se refiere a un conjunto de herramientas que se utilizan para el desarrollo e implementación de una aplicación, y a las que se les da un nombre global para poder identificar de qué estamos hablando. Las **ventajas que nos proporcionan los frameworks** son muchas:
 * Disponen de una estructura global de la aplicación que simplemente debemos rellenar.
 * Facilita la colaboración entre programadores.
 * Facilita la utilización de herramientas (utilizades, librerías, etc) adaptadas al framework para facilitar el desarrollo.

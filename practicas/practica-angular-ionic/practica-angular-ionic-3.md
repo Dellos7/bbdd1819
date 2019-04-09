@@ -2,13 +2,13 @@
 
 # Introducción a Angular
 
-En la [sección anterior](./practica-angular-ionic-2.md) vimos la estructura básica y los principales ficheros de una aplicación en Angular. Incluso hicimos un pequeño adelanto de la potencia de Ionic.
+En la [sección anterior](./practica-angular-ionic-2-nuevo.md) vimos la estructura básica y los principales ficheros de una aplicación en Angular. Incluso hicimos un pequeño adelanto de la potencia de Ionic.
 
-En esta sección vamos a tratar de hacer un **repaso por las principales funcionalidades de Angular** que nos pueden ser muy útiles para desarrollar nuestra aplicación.
+En esta sección vamos a tratar de hacer un **repaso por las principales funcionalidades de Angular** que nos serán muy útiles para desarrollar nuestra aplicación de salas de chat.
 
 ## *Binding*
 
-El *binding*, traducido al castellano como *unión* o *atadura* es un mecanismo que nos permite unir o asociar variables entre el fichero `.html` y el fichero `.ts`. Esto es útil para mostrar datos en la vista (`.html`) procedentes de un servicio de datos (por ejemplo, una base de datos) o para recoger datos en el `.ts` que se hayan introducido en la vista (por ejemplo, un formulario con `inputs`) y que podríamos almacenar también en una base de datos si quisiéramos.
+El *binding*, traducido al castellano como *unión* o *atadura* es un mecanismo que nos permite unir o asociar variables entre el fichero `.html` y el fichero `.ts`. Esto es útil para mostrar datos en la vista (`.html`) procedentes de un servicio de datos (por ejemplo, una base de datos); o bien para recoger datos en el `.ts` que se hayan introducido en la vista (por ejemplo, un formulario con `inputs`) y que podríamos almacenar también en una base de datos si quisiéramos.
 
 La página home (`pages/home`) dispone de los ficheros `home.ts` y `home.html`. En Angular, a este fichero `.ts` se le llama **controlador**, porque es el fichero encargado de controlar lo que ocurre en el fichero `.html` (la vista).
 
@@ -65,7 +65,7 @@ cambiarNombre( nombre: string ) {
 }
 ```
 
-Pruébalo ahora. Debería hacer exactamente lo mismo. Ahora, lo que estamos haciendo es ejecutar directamente una función del controlador desde el html. **¿No te parece maravilloso?**. Y todo esto ¡gracias a Angular!
+Pruébalo ahora. Debería hacer exactamente lo mismo. Ahora, lo que estamos haciendo es ejecutar directamente una función del controlador desde el html. Y todo esto ¡gracias a Angular! Créeme que si lo tuviéramos que hacer con JavaScript plano, las cosas se complicarían más de lo necesario.
 
 ### *Two-way binding*
 
@@ -108,7 +108,7 @@ constructor( public navCtrl: NavController ) {
 }
 ```
 
-Y, ahora, hay que hacer el *binging* en la vista con la propiedad `nombre` del objeto `campeon`:
+Y, ahora, hay que hacer el *binding* en la vista con la propiedad `nombre` del objeto `campeon`:
 
 ```html
 Hola! Soy {{ campeon.nombre }}
@@ -233,7 +233,7 @@ Además, fíjate en la sintaxis de utilización del `ngClass`. Se está indicand
 
 ## Providers o Servicios
 
-Los **providers**, también conocidos como **servicios**, son clases utilizadas en Angular que permiten mantener una única instancia (objeto) de dicha clase y compartirla entre todas las páginas y componentes de la aplicación. Son muy parecidos a las **clases estáticas de Java**, y **se utilizan tanto para guardar datos que queremos que compartan todas las páginas o componentes** como para **crear funciones que se utilizarán en distintos puntos distintos de la aplicación**.
+Los **providers**, también conocidos como **servicios**, son clases utilizadas en Angular que permiten mantener una única instancia (objeto) de dicha clase y compartirla entre todas las páginas y componentes de la aplicación. Son muy parecidos a las **clases estáticas de Java**, y **se utilizan tanto para guardar datos que queremos que compartan todas las páginas o componentes** como para **crear funciones que se utilizarán en distintos puntos de la aplicación**.
 
 Vamos a verlo con un ejemplo. Haz click derecho sobre la carpeta `app` del proyecto, `Angular Generator` > `Service`. Dale el nombre `Campeones`.
 
@@ -256,7 +256,7 @@ Si te fijas, es una clase normal y corriente, pero con la anotación `@Injectabl
 
 Pero no sólo esto es lo que hace que podamos utilizar el servicio como es debido. Entra en el fichero de configuración `app/app.module.ts`. Asegúrate de que queda de la siguiente forma:
 
-> **Nota**: StackBlitz añade por defecto el servicio generador en este fichero. A mí me ha pasado que StackBlitz me ha añadido el servicio, pero no lo ha hecho correctamente, y me estaba dando un error. Es por ello que debes asegurarte de que te queda igual que en la captura (al final, que quede bien añadido en el array `providers`).
+> **Nota**: StackBlitz añade por defecto el servicio generado en este fichero. A mí me ha pasado que StackBlitz me ha añadido el servicio, pero no lo ha hecho correctamente, y me estaba dando un error. Es por ello que debes asegurarte de que te queda igual que en la captura (al final, que quede bien añadido en el array `providers`).
 
 ![](./campeones-service_app.module.jpg)
 
@@ -319,8 +319,8 @@ Nombre del nuevo campeón favorito: <input type="text" [(ngModel)]="nuevoCampeon
 
 ---
 
-Ya has visto una primera introducción a Angular y conoces los elementos básicos que, pese a ser pocos y básicos, nos permitirán desarrollar la mayor parte de nuestras aplicaciones en Angular. 
+Ya has visto una primera introducción a Angular y conoces algunos elementos que, pese a ser pocos y básicos, nos permitirán desarrollar la mayor parte de nuestras aplicaciones en Angular. 
 
-Ahora, ve a la siguiente sección: [Introducción a Ionic](./practica-angular-ionic-4.md)
+Ahora, ve a la siguiente sección: 👉🏻[Introducción a Ionic](./practica-angular-ionic-4.md)
 
 {%endraw%}
