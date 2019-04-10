@@ -7,9 +7,14 @@ En esta práctica implementarás la integración de la aplicación web de campeo
 > **IMPORTANTE**: **Clona** el proyecto de tu aplicación de LoL de StackBlitz y empieza esta práctica sobre el proyecto clonado. No hagas las modificaciones en la aplicación sobre el proyecto de la práctica anterior, hazlo sobre una copia utilizando la opción *Fork* de StackBlitz.
 
 Tendrás que entregar:
-* Enlace a la **aplicación web desplegada en Firebase**.
 * Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
+* **Código fuente** en un .zip de la aplicación de StackBlitz.
+* Enlace a la **aplicación web desplegada en Firebase**.
 * **Dar permisos** al correo electrónico al259345@uji.es con funciones de Editor al proyecto Firebase creado para la aplicación.
+* **Un documento** con las siguientes reflexiones:
+    - ¿Qué has aprendido en esta práctica?
+    - ¿Qué te ha parecido más interesante?
+    - ¿Qué no te ha quedado claro o crees no esta bien explicado?
 
 ![](./permisos-firebase.png)
 
