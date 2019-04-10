@@ -9,7 +9,7 @@ En esta práctica implementarás de forma autónoma una aplicación sencilla de 
     * Editar una nota existente.
     * Eliminar una nota.
 
-Más adelante tienes un ejemplo de las pantallas de la aplicación. Además, **debes tener en cuenta lo siguiente**:
+Más adelante tienes un ejemplo de las pantallas de la aplicación y una [sección de ayuda](#ayuda) que quizá necesites consultar para algunos aspectos más complejos de la app. Además, **debes tener en cuenta lo siguiente**:
 * **Céntrate en la funcionalidad.** Si quieres cambiar o mejorar el estilo o el diseño, déjalo para el final.
 * Tu aplicación **no debe ser exactamente igual que la de ejemplo**. Puedes decidir tú mismo cómo hacerla, pero debe cumplir los requisitos indicados.
 * Más adelante dispones de una **sección de ayuda** que puedes consultar para aquellos problemas que, según los requisitos, es más posible que te encuentres (por ejemplo, gestión de fechas).
@@ -18,8 +18,13 @@ Más adelante tienes un ejemplo de las pantallas de la aplicación. Además, **d
 
 Tendrás que entregar:
 * Enlace a la **aplicación web desplegada en Firebase**.
-* Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
 * **Dar permisos** al correo electrónico al259345@uji.es con funciones de Editor al proyecto Firebase creado para la aplicación.
+* Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
+* **Código fuente** en un .zip de la aplicación de StackBlitz.
+* **Un documento** con las siguientes reflexiones:
+    - ¿Qué has aprendido en esta práctica?
+    - ¿Qué te ha parecido más interesante?
+    - ¿Qué no te ha quedado claro o crees no esta bien explicado?
 
 ![](./permisos-firebase.png)
 
