@@ -91,7 +91,7 @@ let foo = rxjs.Observable.create( (observer) => {
   observer.next(100); // devolver otro valor
   observer.next(200); // devolver otro valor
   setTimeout(() => {
-    observer.next(300); // devuelve otro valor al cabo de 100ms (1s)
+    observer.next(300); // devuelve otro valor al cabo de 1000ms (1s)
   }, 1000);
 });
 
@@ -120,4 +120,4 @@ Si quisiéramos en algún momento que el observable dejara de devolvernos valore
 
 `foo.unsubscribe();`
 
-Por tanto, **los observables son útiles** ya que permiten que podamos recibir más de un valor (al contrario que con las funciones). Esto es útil, por ejemplo, si nos suscribimos a un observable conectado a una base de datos, de tal forma que podríamos recibir actualizaciones en tiempo real de la base de datos en ese observable, sin necesidad de tener que actualizar ni volver a llamar nosotros a la función correspondiente para obtener datos.
+Por tanto, **los observables son útiles** ya que permiten que podamos recibir más de un valor (al contrario que con las funciones). **Esto es útil, por ejemplo, si nos suscribimos a un observable conectado a una base de datos**, de tal forma que podríamos recibir actualizaciones en tiempo real de la base de datos en ese observable, sin necesidad de tener que actualizar ni volver a llamar nosotros a la función correspondiente para obtener datos. **Sería la función que le pasamos al método `subscribe` (a modo de callback) la que se ejecutaría** cuando la base de datos nos hubiera enviado ya los datos que le hubiéramos pedido.
