@@ -9,7 +9,7 @@ En esta práctica implementarás la integración de la aplicación web de campeo
 Tendrás que entregar:
 * Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
 * **Código fuente** en un .zip de la aplicación de StackBlitz.
-* Enlace a la **aplicación web desplegada en Firebase**.
+* Enlace a la **aplicación web desplegada en Firebase**. Mira [este vídeo](https://youtu.be/I7lio33gv_o) sobre cómo desplegar una aplicación de StackBlitz en Firebase.
 * **Dar permisos** al correo electrónico al259345@uji.es con funciones de Editor al proyecto Firebase creado para la aplicación.
 * **Un documento** con las siguientes reflexiones:
     - ¿Qué has aprendido en esta práctica?

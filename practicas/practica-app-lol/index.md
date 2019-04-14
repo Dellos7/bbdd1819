@@ -9,7 +9,7 @@ En esta práctica aprenderás la primera parte: desarrollar la aplicación **sin
 ## Entrega
 
 Tendrás que entregar:
-* Enlace a la **aplicación web desplegada en Firebase**.
+* Enlace a la **aplicación web desplegada en Firebase**. Mira [este vídeo](https://youtu.be/I7lio33gv_o) sobre cómo desplegar una aplicación de StackBlitz en Firebase.
 * Enlace al **proyecto de StackBlitz para poder ver el código de la aplicación**.
 * **Código fuente** en un .zip de la aplicación de StackBlitz.
 * **Un documento** con las siguientes reflexiones:
