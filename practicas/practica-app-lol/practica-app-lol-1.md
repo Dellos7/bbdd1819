@@ -8,6 +8,7 @@ Con este primer vídeo desarrollaremos la primera página de nuestra aplicación
 
 * Plantilla starter para clonar: [https://stackblitz.com/edit/ionic3-plantilla-starter-bbdd1819](https://stackblitz.com/edit/ionic3-plantilla-starter-bbdd1819)
 * Enlace al JSON con la lista de campeones (arreglado el problema de `http` por `https` que se comenta en el vídeo): [https://github.com/Dellos7/lol-champions/blob/master/champions.json](https://github.com/Dellos7/lol-champions/blob/master/champions.json)
+* Enlace a la documentación de la versión 3 de Ionic: [https://ionicframework.com/docs/v3/](https://ionicframework.com/docs/v3/)
 
 ## Resultado
 
