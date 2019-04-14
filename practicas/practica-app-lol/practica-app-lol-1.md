@@ -10,6 +10,7 @@ Con este primer vídeo desarrollaremos la primera página de nuestra aplicación
 * Enlace al JSON con la lista de campeones (arreglado el problema de `http` por `https` que se comenta en el vídeo): [https://github.com/Dellos7/lol-champions/blob/master/champions.json](https://github.com/Dellos7/lol-champions/blob/master/champions.json)
 * Enlace a la documentación de la versión 3 de Ionic: [https://ionicframework.com/docs/v3/](https://ionicframework.com/docs/v3/)
 * URL imagen Ezreal: [https://ddragon.leagueoflegends.com/cdn/8.11.1/img/champion/Ezreal.png](https://ddragon.leagueoflegends.com/cdn/8.11.1/img/champion/Ezreal.png)
+* URL imagen Ahri: [https://ddragon.leagueoflegends.com/cdn/8.11.1/img/champion/Ahri.png](https://ddragon.leagueoflegends.com/cdn/8.11.1/img/champion/Ahri.png)
 
 ## Resultado
 
