@@ -1,8 +1,8 @@
 # Eliminar un campeón desde la aplicación a Firebase
 
-**La primera parte** del vídeo consiste en cómo poder eliminar un campeón desde la aplicación en Firebase. 
+**La primera parte** del vídeo consiste en cómo poder eliminar un campeón desde la aplicación en Firebase (hasta min. 4 más o menos). 
 
-En la **segunda parte** del vídeo se explica cómo añadir de forma visual unos botones deben permitir:
+En la **segunda parte** (a partir de min. 4) del vídeo se explica cómo añadir de forma visual unos botones deben permitir:
 1. Eliminar todos los campeones existentes en Firebase.
 2. Resincronizar todos los campeones a Firebase (utilizando para ello el JSON de la lista incrustada de campeones).
 
