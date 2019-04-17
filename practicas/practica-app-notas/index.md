@@ -14,6 +14,7 @@ Más adelante tienes un ejemplo de las pantallas de la aplicación y una [secci�
 * Tu aplicación **no debe ser exactamente igual que la de ejemplo**. Puedes decidir tú mismo cómo hacerla, pero debe cumplir los requisitos indicados.
 * Apóyate en el código que has desarrollado para las prácticas anteriores, ya que te ayudará a realizar la mayor parte de la aplicación. Piensa en cómo lo hiciste antes y de qué forma similar lo podrías hacer ahora.
 * Más adelante dispones de una **sección de ayuda** que puedes consultar para aquellos problemas que, según los requisitos, es más posible que te encuentres (por ejemplo, gestión de fechas).
+* La gestión de fechas no es lo más importante (además de que es probablemente lo más complejo). Te recomiendo que te centres en el resto de funcionalidades y dejes esto para el final.
 
 ## Entrega
 
