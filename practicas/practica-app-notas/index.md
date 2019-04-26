@@ -154,3 +154,30 @@ crearDocumentoConIdAutomaticoYCampoId( documento ) {
 ```
 
 Lo que hacemos aquí es utilizar la función `then` del resultado de ejecutar el método `add`. A este método le podemos pasar una función (será un `callback`) y esa función recibirá el documento guardado en Firebase (en el ejemplo, `docGuardadoFirebase`). Este objeto recibido tiene el campo `id`, que podemos utilizar en ese momento junto con el método `update`, que sirve para actualizar el documento. Actualizamos por tanto el documento y le añadimos el campo `id` en el cuerpo del documento para poder utilizarlo después cuando lo necesitemos.
+
+¿Cómo podemos **utilizar esta función que hemos creado**? Supongamos que tenemos en la variable `tituloNota` el título de la nota, en la variable `descripcionNota` la descripcion de la nota y en la variable `fechaNota` la fecha de la nota. Utilizaríamos la función que hemos creado así:
+
+```typescript
+//Creamos el JSON (documento) de la nota tal y como se almacenará en Firebase. Recordemos que en Firebase se llama documento, pero es análogo a un JSON en JavaScript
+let nota = {
+  titulo: tituloNota,
+  descripcion: descripcionNota,
+  fecha: fechaNota
+};
+
+//Suponiendo que nuestro servicio de notas se llama "notasSvc", llamamos a esa función pasándole simplemente la nota
+this.notasSvc.crearDocumentoFirebaseConIdAutomatico( nota );
+```
+
+Simplemente el hecho de llamar a esa función, creará la nota en nuestra colección de Firebase con el ID de la nota en forma de campo en el cuerpo del documento. Osea, tendremos una nota en Firebase tal que así:
+
+```json
+{
+  titulo: 'El titulo de la nota',
+  descripcion: 'La descripción de la nota',
+  fecha: '2019-04-26 10:20:00',
+  id: 'hjwdbhyungf8392djiehuyfg' 
+}
+```
+
+donde el campo `id` será el ID creado automáticamente por Firebase.
