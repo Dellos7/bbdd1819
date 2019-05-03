@@ -30,3 +30,5 @@
 # Recursos
 
 [Arreglar el problema del alert feo](./arreglar-problema-alert-feo.md)
+
+[Hacer app responsive](./hacer-app-responsive.md)
