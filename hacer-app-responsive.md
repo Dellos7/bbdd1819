@@ -12,4 +12,14 @@ Como podréis comprobar, esto no está demasiado adaptado para el uso con dispos
 
 Si desplegáis de nuevo la aplicación a Firebase y accedéis desde el móvil, debería verse correctamente, con un diseño y tamaño adaptado al dispositivo.
 
+Si alguien tiene interés en saber por qué funciona o qué está ocurriendo, realmente la etiqueta del `html` que está haciendo esto posible es la siguiente:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+```
+
+En [este artículo](https://webdesign.tutsplus.com/es/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972) explica mejor por qué y qué es lo que hace exactamente esta etiqueta.
+
+Si todo va bien, deberíais ver vuestra aplicación adaptada al dispositivo, como esta:
+
 ![](./hacer-app-responsive-2.jpg)
