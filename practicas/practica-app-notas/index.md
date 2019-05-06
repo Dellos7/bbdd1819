@@ -63,7 +63,7 @@ import * as firebase from 'firebase';
 /**
  * Algunas referencias de ayuda:
  * - Fechas en JavaScript: https://www.w3schools.com/jsref/jsref_obj_date.asp
- * - Formato fecha ISO en JavaScript: https://www.w3schools.com/jsref/jsref_toisostring.convertirFechaFirebaseAFechaJavaScriptISO
+ * - Formato fecha ISO en JavaScript: https://www.w3schools.com/jsref/jsref_toisostring.asp
  * - Fecha en Firebase: https://firebase.google.com/docs/reference/android/com/google/firebase/Timestamp
  */
 
