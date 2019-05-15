@@ -32,3 +32,5 @@
 [Arreglar el problema del alert feo](./arreglar-problema-alert-feo.md)
 
 [Hacer app responsive](./hacer-app-responsive.md)
+
+[Detectar que se cierra una pestaña del navegador](./detectar-navegador-cierra-pestanya.md)
